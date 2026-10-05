@@ -1,0 +1,31 @@
+timezone: Asia/Tokyo
+period:
+  monthStartDay: 1
+  weekStartsOn: monday
+categories:
+  expense: [食費, 日用品, 趣味・娯楽]
+  income: [収入]
+budgets:
+  yearly: 3000000
+  monthly: 250000
+  weekly: 60000
+  monthlyByCategory:
+    食費: 60000
+    日用品: 15000
+savings:
+  yearlyTarget: 2000000
+warnings:
+  overBudget: { enabled: true }
+  pace: { enabled: true, marginPercent: 10 }
+  stale: { enabled: true, maxAgeHours: 48, ignoreAccounts: [] }
+mf:
+  bulkUpdate: { enabled: false, timeoutSeconds: 300 }
+discord:
+  mentionOnWarning: ""
+secrets:
+  provider: onepassword
+  refs:
+    webhookUrl: "op://Private/mf-notify Discord/credential"
+    mfEmail: "op://Private/MoneyForward ME/username"
+    mfPassword: "op://Private/MoneyForward ME/password"
+    mfTotpSecret: "op://Private/MoneyForward ME/TOTP_xxxx"
